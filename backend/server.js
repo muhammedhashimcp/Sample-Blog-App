@@ -17,7 +17,7 @@ app.post('/', (req, res) => {
 });
 mongoose
 	.connect(process.env.MONGO_URI_ATLAS)
-	.then(() => console.log('Connected TO Database  '))
+	.then(() => console.log('Connected To Database  '))
 	.catch((err) => console.log(err));
 app.listen(5000, console.log('Listening To Localhost 5000'));
 // "start": "nodemon --experimental-modules --es-module-specifier-resolution=node server.js",

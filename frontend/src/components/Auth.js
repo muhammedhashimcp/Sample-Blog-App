@@ -30,13 +30,11 @@ const Auth = () => {
 			.catch((err) => console.log(err));
 
 		const data = await res.data;
-		console.log(data);
 		return data;
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(inputs);
 		if (isSignup) {
 			sendRequest('signup')
 				.then((data) => localStorage.setItem('userId', data.user._id))

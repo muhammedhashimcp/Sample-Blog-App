@@ -17,7 +17,7 @@ const Header = () => {
   const dispath = useDispatch();
   const isLoggedIn = useSelector((state) => state.isLoggedIn);
 
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(0);
   return (
     <AppBar
       position="sticky"
@@ -35,7 +35,7 @@ const Header = () => {
             <Tabs
               textColor="inherit"
               value={value}
-              onChange={(e, val) => setValue(val)}
+              onChange={(e) => setValue(e.target.value)}
             >
               <Tab
                 className={classes.font}
