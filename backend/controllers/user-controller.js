@@ -16,6 +16,7 @@ export const getAllUser = async (req, res, next) => {
 
 export const signup = async (req, res, next) => {
 	const { name, email, password } = req.body;
+	console.log("🚀 ~ file: user-controller.js ~ line 19 ~ signup ~ req.body", req.body)
 	let existingUser;
 	try {
 		existingUser = await User.findOne({ email });
